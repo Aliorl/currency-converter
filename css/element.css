@@ -1,0 +1,9 @@
+.element {
+    max-width: 700px;
+    width: 100%;
+    resize: both;
+    overflow: auto;
+    background-image: url("../images/pexels-pixabay-164527.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}

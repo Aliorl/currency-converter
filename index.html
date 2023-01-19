@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaltulator walut</title>
+    <link rel="icon" href="images/money-bag.png">
+    <meta property="og:image" content="images/share.png">
+    <meta name="title" property="og:title" content="Currency converter" />
+    <meta name="description"
+        content="This app allows you to convert currencies. First enter the amount, then select the input currency and then the output currency. The result will be returned after pressing the Calculate button." />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMontserrat:400,700&display=swap&subset=latin-ext"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/element.css" />
+    <link rel="stylesheet" href="css/container.css" />
+    <link rel="stylesheet" href="css/form.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <script defer src="js/script.js"></script>
+</head>
+
+<body>
+    <div class="container element">
+        <form class="form js-form">
+            <fieldset class="form__fieldset">
+                <legend class="form__legend">Currency converter</legend>
+                <p>
+                    <label>
+                        <span class="form__labelText">Amount*: </span>
+                        <input class="form__field js-amount" type="number" min="0.01" name="amount" step="0.01"
+                            placeholder="Enter the amount" required>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <span class="form__labelText">Input currency: </span>
+                        <select class="form__field form__field--select js-input" name="inputCurrency">
+                            <option value="PLN" selected>PLN</option>
+                            <option value="EUR">EUR</option>
+                            <option value="USD">USD</option>
+                        </select>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <span class="form__labelText">Output currency: </span>
+                        <select class="form__field form__field--select js-output" name="outputCurrency">
+                            <option value="PLN">PLN</option>
+                            <option value="EUR" selected>EUR</option>
+                            <option value="USD">USD</option>
+                        </select>
+                    </label>
+                </p>
+                <p>
+                    <span class="form__labelText--required">* Required field</span>
+                </p>
+                <input class="form__button js-submit" type="submit" value="Calculate">
+            </fieldset>
+            <div class="form__paragraph">
+                Result: <strong class="js-result"></strong>
+            </div>
+        </form>
+    </div>
+    <footer class="footer">©Copyright 2022 Alicja Orlik. All rights reversed.</footer>
+</body>
+
+</html>
